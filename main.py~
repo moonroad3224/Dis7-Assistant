@@ -9,6 +9,12 @@ client = discord.Client(intents=intents)
 bot = commands.Bot(command_prefix='!', intents=intents)
 tree = app_commands.CommandTree(client)
 dotenv.load_dotenv()
+
+directory = Path("appdir")
+file_list = [f for f in directory.iterdir() if f.is_file()]
+
+print(file_list)
+
 bottoken = os.environ.get("TOKEN1")
 
 @client.event
@@ -17,6 +23,8 @@ async def on_ready():
     await client.change_presence(activity=discord.Game(name=f"Last on_ready executed:{datetime.datetime.now()}(+09:00 JST)"))
     print(f"{datetime.datetime.now()}:on_ready  client.user:{client.user} ")
     await tree.sync()
+
+
 
 @tree.command(name="issues", description="問題を発見したら")
 async def help(interaction: discord.Interaction):
