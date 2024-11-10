@@ -25,7 +25,7 @@ async def help(interaction: discord.Interaction):
     text = f"もし問題が発生しましたらこちら入力してくれるとありがたいです。（GitHubアカウントが必要です。）: https://github.com/moonroad3224/Dis7-Assistant/issues"
     text = f"{text}\nもしくはmoonroad3224-中村久八まで"
     embed = discord.Embed(title="ヘルプ", description=text, color=0x2000FF)
-    embed.add_field(name="ヘルプ", value="フィールドの値", inline=False)
+    await interaction.response.send_message(embed=embed)
     print(f"{datetime.datetime.now()}:{interaction.id} Done.")
 #いったん別ファイルで使うつもりのコマンド↓
 
