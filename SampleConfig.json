@@ -1,0 +1,18 @@
+{
+    "ServerID":{
+        "ServerName":"Example",
+        "ReactionRoleConfig":{
+            "Activateflag":"True or False",
+            "ChannelID":"0000",
+            "MessageID":"0000",
+            "Reaction":{
+                ":exanple:":"RoleID"
+            }
+        },
+        "LockMessageConfig":{
+            "Activateflag":"True or False",
+            "ChannnelID":"0000",
+            "Article":"Article"
+        }
+    }
+}
